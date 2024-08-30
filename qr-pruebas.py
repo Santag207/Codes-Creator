@@ -63,5 +63,3 @@ for doc_name in document_names:
     link = f"https://livejaverianaedu-my.sharepoint.com/:b:/g/personal/castrozsantiago_javeriana_edu_co/EaJ2Y9WM9i1Fhznz1xHS3IkBQopHJPDUoWEdEICtKUNdrg?e=n87TaE"  # Cambia a tus enlaces
     generate_qr_with_logo(link, doc_name)
 
-#https://livejaverianaedu-my.sharepoint.com/:b:/g/personal/castrozsantiago_javeriana_edu_co/EaJ2Y9WM9i1Fhznz1xHS3IkBQopHJPDUoWEdEICtKUNdrg?e=n87TaE
-#https://livejaverianaedu-my.sharepoint.com/my?id=%2Fpersonal%2Fcastrozsantiago%5Fjaveriana%5Fedu%5Fco%2FDocuments%2FPiezas%20Inventario%20PujVex%2F{doc_name}%2Epng&parent=%2Fpersonal%2Fcastrozsantiago%5Fjaveriana%5Fedu%5Fco%2FDocuments%2FPiezas%20Inventario%20PujVex&ga=1
