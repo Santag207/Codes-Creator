@@ -4,7 +4,7 @@ from barcode.writer import ImageWriter
 import os
 
 # Ruta del archivo de Excel
-excel_file_path = r"C:\Users\santi\Documents\Inventario\Inventario PujVex.xlsx"
+excel_file_path = r"C:\Users\santi\OneDrive\Documentos\GitHub\Qr-and-BarCode-creator\Inventario\Inventario PujVex.xlsx"
 
 # Cargar el archivo de Excel
 excel_data = pd.ExcelFile(excel_file_path)
@@ -13,7 +13,7 @@ excel_data = pd.ExcelFile(excel_file_path)
 inventory_data = excel_data.parse('Inventario')
 
 # Definir la ruta para guardar las imágenes
-save_path = r"C:\Users\santi\Documents\Inventario\Barras"
+save_path = r"C:\Users\santi\OneDrive\Documentos\GitHub\Qr-and-BarCode-creator\Inventario\Barras"
 
 # Asegurarse de que la carpeta de destino existe
 os.makedirs(save_path, exist_ok=True)

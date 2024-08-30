@@ -3,8 +3,9 @@ from PIL import Image
 import os
 
 # Directorios
-qr_output_dir = "C:/Users/santi/Documents/Inventario/QRs"  # Donde se guardarán los QR
-logo_dir = "C:/Users/santi/Documents/Inventario/Barras"    # Donde están los logos
+qr_output_dir = r"C:\Users\santi\OneDrive\Documentos\GitHub\Qr-and-BarCode-creator\Inventario\QRs"
+logo_dir = r"C:\Users\santi\OneDrive\Documentos\GitHub\Qr-and-BarCode-creator\Inventario\Barras"
+
 
 # Asegúrate de que el directorio de salida exista
 os.makedirs(qr_output_dir, exist_ok=True)
@@ -39,7 +40,7 @@ def generate_qr_with_logo(link, document_name):
     logo = Image.open(logo_path).convert("RGBA")
 
     # Calcular el tamaño del logo (20% del tamaño del QR)
-    logo_size = int(min(img.size) * 0.2)
+    logo_size = int(min(img.size) * 0.4)
     logo = logo.resize((logo_size, logo_size), Image.LANCZOS)
 
     # Calcular la posición del logo en el centro del QR
@@ -56,8 +57,11 @@ def generate_qr_with_logo(link, document_name):
     print(f"QR guardado en: {save_path}")
 
 # Ejemplo de uso
-document_names = ["10TS", "6THSS"]  # Lista de nombres de documentos
+document_names = ["10TS"]  # Lista de nombres de documentos
 
 for doc_name in document_names:
-    link = f"https://livejaverianaedu-my.sharepoint.com/my?id=%2Fpersonal%2Fcastrozsantiago%5Fjaveriana%5Fedu%5Fco%2FDocuments%2FPiezas%20Inventario%20PujVex%2F{doc_name}%2Epng&parent=%2Fpersonal%2Fcastrozsantiago%5Fjaveriana%5Fedu%5Fco%2FDocuments%2FPiezas%20Inventario%20PujVex&ga=1"  # Cambia a tus enlaces
+    link = f"https://livejaverianaedu-my.sharepoint.com/:b:/g/personal/castrozsantiago_javeriana_edu_co/EaJ2Y9WM9i1Fhznz1xHS3IkBQopHJPDUoWEdEICtKUNdrg?e=n87TaE"  # Cambia a tus enlaces
     generate_qr_with_logo(link, doc_name)
+
+#https://livejaverianaedu-my.sharepoint.com/:b:/g/personal/castrozsantiago_javeriana_edu_co/EaJ2Y9WM9i1Fhznz1xHS3IkBQopHJPDUoWEdEICtKUNdrg?e=n87TaE
+#https://livejaverianaedu-my.sharepoint.com/my?id=%2Fpersonal%2Fcastrozsantiago%5Fjaveriana%5Fedu%5Fco%2FDocuments%2FPiezas%20Inventario%20PujVex%2F{doc_name}%2Epng&parent=%2Fpersonal%2Fcastrozsantiago%5Fjaveriana%5Fedu%5Fco%2FDocuments%2FPiezas%20Inventario%20PujVex&ga=1
