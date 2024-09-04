@@ -27,15 +27,18 @@ with open(txt_output_path, 'w') as txt_file:
     # Crear y guardar una imagen por cada código de barras
     for codigo in codigos:
         if codigo.strip():  # Ignorar celdas en blanco o que solo contienen espacios
+            # Eliminar caracteres no alfanuméricos del código antes de generarlo
+            codigo_limpio = ''.join(filter(str.isalnum, codigo))
+            
             # Crear el código de barras usando python-barcode
-            codigo_barra = barcode.get('code39', codigo, writer=ImageWriter())
+            codigo_barra = barcode.get('code39', codigo_limpio, writer=ImageWriter())
             
             # Guardar la imagen con el nombre del código
-            filename = os.path.join(save_path, codigo)
+            filename = os.path.join(save_path, codigo_limpio)
             codigo_barra.save(filename)
             
-            # Escribir el código en el archivo de texto en el formato deseado
-            txt_file.write(f'"{codigo}",\n')
+            # Escribir el código limpio en el archivo de texto en el formato deseado
+            txt_file.write(f'"{codigo_limpio}",\n')
 
 # Mostrar los primeros códigos como referencia
 print(codigos.head())

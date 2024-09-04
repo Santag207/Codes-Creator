@@ -57,9 +57,9 @@ def generate_qr_with_logo(link, document_name):
     print(f"QR guardado en: {save_path}")
 
 # Ejemplo de uso
-document_names = ["10TS"]  # Lista de nombres de documentos
+document_names = ["A125"]  # Lista de nombres de documentos
 
 for doc_name in document_names:
-    link = f"https://livejaverianaedu-my.sharepoint.com/:b:/g/personal/castrozsantiago_javeriana_edu_co/EaJ2Y9WM9i1Fhznz1xHS3IkBQopHJPDUoWEdEICtKUNdrg?e=n87TaE"  # Cambia a tus enlaces
+    link = f"https://livejaverianaedu-my.sharepoint.com/:b:/g/personal/castrozsantiago_javeriana_edu_co/ETNf3HvHnH9Lgru2TEsGNUABKpdmS0bMCLfKNV1hqX4Xlg?e=TJW3AO"  # Cambia a tus enlaces
     generate_qr_with_logo(link, doc_name)
 
