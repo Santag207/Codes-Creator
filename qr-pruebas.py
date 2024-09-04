@@ -3,8 +3,8 @@ from PIL import Image
 import os
 
 # Directorios
-qr_output_dir = r"C:\Users\santi\OneDrive\Documentos\GitHub\Qr-and-BarCode-creator\Inventario\QRs"
-logo_dir = r"C:\Users\santi\OneDrive\Documentos\GitHub\Qr-and-BarCode-creator\Inventario\Barras"
+qr_output_dir = r"C:\Users\santi\OneDrive\Documentos\GitHub\Codes-Creator\Inventario\QRs"
+logo_dir = r"C:\Users\santi\OneDrive\Documentos\GitHub\Codes-Creator\Inventario\Barras"
 
 
 # Asegúrate de que el directorio de salida exista
