@@ -4,7 +4,7 @@
 **Codes-Creator** is a collection of Python scripts designed to generate and manage QR codes and barcodes for the management and development of the inventory of the JaVex Robotics seedbed of the Pontificia Universidad Javeriana, This is complemented by the application JaVex App. In addition, it includes tools to convert PNG images to PDF format, facilitating the organization and distribution of the generated codes.
 
 ## Team (Developer)
-Santiago CAstro Zuluaga
+Santiago Castro Zuluaga
 
 ## Features
 - **QR Code Generation:** Create custom QR codes from user-provided data.
